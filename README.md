@@ -1,5 +1,5 @@
-This repository is dedicated to addressing PMD Source Code Analyser violations in our codebase. 
-PMD helps us identify potential issues, code style violations, and anti-patterns, 
+This repository is dedicated to addressing and providing sollutions for PMD Source Code Analyser 
+violations in our codebase. PMD helps us identify potential issues, code style violations, and anti-patterns, 
 allowing us to maintain high code quality and readability.
 
 ## About PMD
