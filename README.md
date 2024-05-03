@@ -9,4 +9,8 @@ By running PMD on our codebase, we can ensure adherence to best practices and im
 
 ## To run:
 javac Main.java </br>
-java Main "_input file path_" "_output file path_"
+java Main "_input file path_" "_output file path_" </br>
+For example: </br>
+javac StringBuffer/StringBufferConcatenation.java </br>
+java StringBuffer/StringBufferConcatenation.java "ReadFiles/StringBufferExample.java" "ReadFiles/"
+
