@@ -14,6 +14,7 @@ public class StringBufferConcatenation {
         
         StringBufferConcatenation sm = new StringBufferConcatenation();
         String outputFilePath = sm.StringBCCorrector(inputFilePath, outputDirectoryPath);
+        sm.fixStringBuffer(outputFilePath);   
         
         // Run the Java file from inputFilePath and capture its output
         try {
