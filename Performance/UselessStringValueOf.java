@@ -7,8 +7,8 @@ import java.util.regex.*;
 public class UselessStringValueOf {
 
     public static void main(String[] args) {
-        String inputFilePath = "C:/RA/sample/ReadFiles/UselessStringValueOfExample.java";
-        String outputDirectoryPath = "C:/RA/sample/ReadFiles";
+        String inputFilePath = "ReadFiles/UselessStringValueOfExample.java";
+        String outputDirectoryPath = "ReadFiles";
       
         UselessStringValueOf detector = new UselessStringValueOf();
         String outputFilePath = detector.detectUselessStringValueOf(inputFilePath, outputDirectoryPath);
