@@ -8,7 +8,8 @@ such as unused variables, empty catch blocks, and inefficient code constructs.
 By running PMD on our codebase, we can ensure adherence to best practices and improve overall code health.
  PMD categorizes violations into nine types, including Index, Best Practices, Code Style, Design, Documentation,
  Error Prone, Multithreading, Performance, and Security.
- 
+
+## Our Work
 As a first step this project giving fixes for Java violations under the performance category. PMD identifies 24 violations </br>
 under categoery performance. We provide fixes for a selected 10 violations.
 
