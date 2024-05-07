@@ -69,14 +69,18 @@ public class AvoidCalendarDateCreation {
         return null;
     }
 
-    public static String correctAvoidCalendarDateCreation(String input) {
-        // Regular expression to match Calendar.getInstance().getTimeInMillis()
-        String regex = "Calendar\\.getInstance\\(\\)\\.getTimeInMillis\\(\\)";
-        // Replacement string with System.currentTimeMillis()
-        String replacement = "System.currentTimeMillis()";
-        // Perform the replacement
-        return input.replaceAll(regex, replacement);
-    }
-        
+   public static String correctAvoidCalendarDateCreation(String input) {
+        String regex1 = "Calendar\\.getInstance\\(\\)\\.getTime\\(\\)";
+        String regex2 = "Calendar\\.getInstance\\(\\)\\.getTimeInMillis\\(\\)";
     
+        // Replacement strings
+        String replacement1 = "new Date\\(\\)";
+        String replacement2 = "System.currentTimeMillis()";
+    
+        // Perform the replacements
+        input = input.replaceAll(regex1, replacement1);
+        input = input.replaceAll(regex2, replacement2);
+    
+        return input;
+    }
 }
