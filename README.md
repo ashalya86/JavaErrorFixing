@@ -6,11 +6,9 @@ allowing us to maintain high code quality and readability.
 PMD is a source code analyzer that detects common programming flaws, 
 such as unused variables, empty catch blocks, and inefficient code constructs. 
 By running PMD on our codebase, we can ensure adherence to best practices and improve overall code health.
-
-## To run:
-javac Main.java </br>
-java Main "_input file path_" "_output file path_" </br>
-For example: </br>
-javac StringBuffer/StringBufferConcatenation.java </br>
-java StringBuffer/StringBufferConcatenation.java "ReadFiles/StringBufferExample.java" "ReadFiles/"
+ PMD categorizes violations into nine types, including Index, Best Practices, Code Style, Design, Documentation,
+ Error Prone, Multithreading, Performance, and Security.
+ 
+As a first step this project giving fixes for Java violations under the performance category. PMD identifies 24 violations </br>
+under categoery performance. We provide fixes for a selected 10 violations.
 
