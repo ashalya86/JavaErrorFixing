@@ -7,8 +7,8 @@ import java.util.regex.*;
 public class AppendCharacterWithChar {
 
     public static void main(String[] args) {
-        String inputFilePath = "C:/RA/sample/ReadFiles/UseIndexOfCharExample.java";
-        String outputDirectoryPath = "C:/RA/sample/ReadFiles";
+        String inputFilePath = "ReadFiles/UseIndexOfCharExample.java";
+        String outputDirectoryPath = "ReadFiles";
       
         AppendCharacterWithChar detector = new AppendCharacterWithChar();
         String outputFilePath = detector.correctAppendCharacterWithChar(inputFilePath, outputDirectoryPath);
