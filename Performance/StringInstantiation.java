@@ -9,33 +9,13 @@ import java.io.*;
 
 public class StringInstantiation {
     public static void main(String[] args) {
-        if (args.length != 2) {
-            System.out.println("Usage: java Main <inputFilePath> <outputDirectoryPath>");
-            return;
-        }
-        
-        String inputFilePath = args[0];
-        String outputDirectoryPath = args[1];
-        
+        String inputFilePath = "ReadFiles/UseIndexOfCharExample.java";
+        String outputDirectoryPath = "ReadFiles";
+      
         StringInstantiation detector = new StringInstantiation();
         String outputFilePath = detector.correctAppendCharacterWithChar(inputFilePath, outputDirectoryPath);
         System.out.println("Corrected file written to: " + outputFilePath);
-
-        // Run the Java file from inputFilePath and capture its output
-        try {
-            Process process = Runtime.getRuntime().exec("java -cp " + outputDirectoryPath + " " + outputFilePath);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            System.out.println("Output of the Java file:");
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-            reader.close();
-        } catch (IOException e) {
-            System.err.println("Error running the Java file: " + e.getMessage());
-        }
-            }
-
+    }
     public String correctAppendCharacterWithChar(String inputFilePath, String outputDirectoryPath) {
         try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath))) {
             String line;
