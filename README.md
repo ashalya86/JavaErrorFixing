@@ -11,6 +11,6 @@ By running PMD on our codebase, we can ensure adherence to best practices and im
 
 ## Our Work
 As a first step this project gives fixes for Java violations under the performance category. PMD identifies 24 violations </br>
-under categoery performance [a link](https://docs.pmd-code.org/latest/pmd_rules_java_performance.html)
+under categoery performance [(PMD)](https://docs.pmd-code.org/latest/pmd_rules_java_performance.html)
 . We provide fixes for a selected 10 violations.
 
