@@ -7,8 +7,8 @@ import java.util.regex.*;
 public class ConsecutiveLiteralAppends {
 
     public static void main(String[] args) {
-        String inputFilePath = "C:/RA/sample/ReadFiles/ConsecutiveLiteralAppendsExample.java";
-        String outputDirectoryPath = "C:/RA/sample/ReadFiles";
+        String inputFilePath = "ReadFiles/ConsecutiveLiteralAppendsExample.java";
+        String outputDirectoryPath = "ReadFiles";
       
         ConsecutiveLiteralAppends detector = new ConsecutiveLiteralAppends();
         String outputFilePath = detector.detectConsecutiveLiteralAppends(inputFilePath, outputDirectoryPath);
