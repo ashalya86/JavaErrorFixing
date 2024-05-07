@@ -7,31 +7,12 @@ import java.util.regex.*;
 public class UselessStringValueOf {
 
     public static void main(String[] args) {
-        if (args.length != 2) {
-            System.out.println("Usage: java Main <inputFilePath> <outputDirectoryPath>");
-            return;
-        }
-        
-        String inputFilePath = args[0];
-        String outputDirectoryPath = args[1];
-        
+        String inputFilePath = "C:/RA/sample/ReadFiles/UselessStringValueOfExample.java";
+        String outputDirectoryPath = "C:/RA/sample/ReadFiles";
+      
         UselessStringValueOf detector = new UselessStringValueOf();
         String outputFilePath = detector.detectUselessStringValueOf(inputFilePath, outputDirectoryPath);
-        System.out.println("Corrected file written to: " + outputFilePath);   
-        
-        // Run the Java file from inputFilePath and capture its output
-        try {
-            Process process = Runtime.getRuntime().exec("java -cp " + outputDirectoryPath + " " + outputFilePath);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            System.out.println("Output of the Java file:");
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-            reader.close();
-        } catch (IOException e) {
-            System.err.println("Error running the Java file: " + e.getMessage());
-        }
+        System.out.println("Corrected file written to: " + outputFilePath);
     }
 
     public String detectUselessStringValueOf(String inputFilePath, String outputDirectoryPath) {
