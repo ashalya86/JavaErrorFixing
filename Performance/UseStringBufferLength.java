@@ -6,8 +6,8 @@ import java.util.regex.*;
 
 public class UseStringBufferLength {
     public static void main(String[] args) {
-        String inputFilePath = "C:/RA/sample/ReadFiles/UseStringBufferLengthExample.java";
-        String outputDirectoryPath = "C:/RA/sample/ReadFiles";
+        String inputFilePath = "ReadFiles/UseStringBufferLengthExample.java";
+        String outputDirectoryPath = "ReadFiles";
       
         UseStringBufferLength detector = new UseStringBufferLength();
         String outputFilePath = detector.detectPerformanceViolation(inputFilePath, outputDirectoryPath);
