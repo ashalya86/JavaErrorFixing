@@ -80,7 +80,6 @@ public class UseVarargs {
     public static String correctUseVarargs(String input) {
         // Perform replacements
         if (input.contains("Object[]")) {
-            // Replace System.out.println with logger.info
             input = input.replace("Object[]", "Object...");
         } 
         return input;
