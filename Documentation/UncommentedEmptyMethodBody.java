@@ -10,11 +10,11 @@ public class UncommentedEmptyMethodBody {
         String outputDirectoryPath = "C:/RA/sample";
 
         UncommentedEmptyMethodBody detector = new UncommentedEmptyMethodBody();
-        String outputFilePath = detector.detectAvoidLiteralsInIfCondition(inputFilePath, outputDirectoryPath);
+        String outputFilePath = detector.detectUncommentedEmptyMethodBody(inputFilePath, outputDirectoryPath);
         System.out.println("Corrected file written to: " + outputFilePath);
     }
 
-    public String detectAvoidLiteralsInIfCondition(String inputFilePath, String outputDirectoryPath) {
+    public String detectUncommentedEmptyMethodBody(String inputFilePath, String outputDirectoryPath) {
         try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath))) {
             String line;
             String className = extractClassName(inputFilePath);
@@ -45,7 +45,7 @@ public class UncommentedEmptyMethodBody {
                     }
 
                     // Detect end of method and check if it's empty
-                    if (insideMethod && line.contains("}") && detectUncommentedEmptyMethodBodies(code.toString())) {
+                    if (insideMethod && line.contains("}") && correctUncommentedEmptyMethodBody(code.toString())) {
                         // Insert default comment inside the empty method body
                         bufferedWriter.write("    // TODO: Implement method functionality\n");
                     }
@@ -70,7 +70,7 @@ public class UncommentedEmptyMethodBody {
         return null;
     }
 
-    private boolean detectUncommentedEmptyMethodBodies(String code) {
+    private boolean correctUncommentedEmptyMethodBody(String code) {
         // Regular expression to match empty method bodies without comments
         String regex = "public\\s+void\\s+\\w+\\(\\)\\s*\\{\\s*\\}";
         Pattern pattern = Pattern.compile(regex);
