@@ -29,7 +29,7 @@ public class AvoidUsingVolatile {
                     while ((line = br.readLine()) != null) {
                         // Check if the line is not a comment
                         if (!line.trim().startsWith("//")) {
-                            // Replace System.print with logger
+                            // Replace volatile
                             line = correctAvoidUsingVolatile(line);
                         }
         
