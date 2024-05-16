@@ -34,7 +34,7 @@ public class UseLocaleWithCaseConversions {
                 while ((line = br.readLine()) != null) {
                     // Check if the line is not a comment
                     if (!line.trim().startsWith("//")) {
-                        // Replace System.print with logger
+                        // Replace with case conversation
                         line = correctUseLocaleWithCaseConversions(line);
                     }
     
@@ -78,7 +78,6 @@ public class UseLocaleWithCaseConversions {
     }
 
     public static String correctUseLocaleWithCaseConversions(String input) {
-        // Perform replacements
         // Perform replacements
         if (input.contains("toLowerCase().equals")) {
             // Replace toLowerCase().equals with equalsIgnoreCase()
