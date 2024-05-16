@@ -3,9 +3,6 @@ package BestPractices;
 import java.io.*;
 import java.util.logging.Logger;
 
-// Need to import     private static final Logger logger = Logger.getLogger(textModified.class.getName());
-// import java.util.logging.Logger;
-
 public class UseVarargs {
     public static void main(String[] args) {
         String inputFilePath = "text1.java";
