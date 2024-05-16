@@ -73,11 +73,9 @@ public class MaxLines {
     }
 
     public String correctMaxLines(String input) {
-        System.out.println("input " + input);
         // Detect whether the input is a comment
         input = input.trim();
         if (input.startsWith("//") || input.startsWith("/*")) {
-            System.out.println("detected");
             // If it is a comment, then measure the length
             String[] lines = input.split("\n");
             StringBuilder correctedInput = new StringBuilder();
